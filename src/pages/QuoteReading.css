@@ -1,0 +1,199 @@
+.quote-reading-page {
+    min-height: 100vh;
+    background: #FAF7F2;
+    padding: 60px 20px 80px;
+    text-align: center;
+}
+
+/* Back Button */
+
+.quote-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #6B46A3;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.quote-back:hover {
+    color: #8A63C9;
+    transform: translateX(-5px);
+}
+
+.top-quote-back {
+    margin-bottom: 35px;
+}
+
+/* Quote Card */
+
+.quote-reading-card {
+    max-width: 750px;
+    margin: 0 auto 35px;
+
+    background: #FFFFFF;
+    padding: 50px 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Full Quote */
+
+.quote-full-content {
+    text-align: center;
+}
+
+.quote-full-content p {
+    color: #555;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+/* Author */
+
+.quote-author {
+    color: #777;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+/* Like Dislike Share */
+
+.quote-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.quote-action-button {
+    background: #FFFFFF;
+
+    border: 1px solid #E5DDF0;
+
+    color: #6B46A3;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quote-action-button:hover {
+    background: #F1EAF8;
+    transform: translateY(-2px);
+}
+
+/* Comments */
+
+.quote-comments {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.quote-comments h2 {
+    color: #6B46A3;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.quote-comments textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    border: 1px solid #E5DDF0;
+
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+.quote-comments textarea:focus {
+    border-color: #8A63C9;
+}
+
+/* Post Comment */
+
+.quote-comment-button {
+    margin-top: 15px;
+
+    background: #6B46A3;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quote-comment-button:hover {
+    background: #8A63C9;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .quote-reading-page {
+        padding: 50px 20px 70px;
+    }
+
+    .quote-reading-card {
+        padding: 35px 20px;
+    }
+
+    .quote-full-content p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .quote-actions {
+        gap: 10px;
+    }
+
+    .quote-action-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .quote-comments h2 {
+        font-size: 24px;
+    }
+}

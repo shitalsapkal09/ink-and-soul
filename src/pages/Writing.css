@@ -1,0 +1,222 @@
+.writing-page {
+    min-height: 100vh;
+    background: #FAF7F2;
+    padding: 60px 20px 90px;
+    text-align: center;
+}
+
+
+/* ============================= */
+/* Back Button */
+/* ============================= */
+
+.top-back {
+    margin-bottom: 40px;
+}
+
+.writing-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #6B46A3;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.writing-back:hover {
+    color: #8A63C9;
+    transform: translateX(-5px);
+}
+
+
+/* ============================= */
+/* Writing Title */
+/* ============================= */
+
+.writing-page h1 {
+    color: #6B46A3;
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    line-height: 1.3;
+    margin: 0 auto 15px;
+    max-width: 850px;
+}
+
+
+/* ============================= */
+/* Author */
+/* ============================= */
+
+.writing-author {
+    color: #777;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+/* ============================= */
+/* Writing Content */
+/* ============================= */
+
+.writing-content {
+    max-width: 750px;
+    margin: 0 auto 40px;
+
+    background: #FFFFFF;
+
+    padding: 55px 60px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    text-align: left;
+}
+
+
+/* ============================= */
+/* Writing Text */
+/* ============================= */
+
+.writing-content p {
+    color: #555;
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    margin: 0 0 20px;
+
+    white-space: pre-line;
+}
+
+.writing-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================= */
+/* Like / Dislike / Share */
+/* ============================= */
+
+.writing-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 0 auto;
+
+    flex-wrap: wrap;
+}
+
+
+.action-button {
+    background: #FFFFFF;
+
+    border: 1px solid #E5DDF0;
+
+    color: #6B46A3;
+
+    padding: 12px 24px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.action-button:hover {
+    background: #F1EAF8;
+
+    border-color: #D8C9EA;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(107, 70, 163, 0.10);
+}
+
+
+/* ============================= */
+/* Active Like / Dislike / Share */
+/* ============================= */
+
+.action-button.active {
+    background: #F1EAF8;
+
+    border-color: #6B46A3;
+
+    color: #6B46A3;
+}
+
+
+/* ============================= */
+/* Mobile Responsive */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .writing-page {
+        padding: 45px 18px 70px;
+    }
+
+
+    .top-back {
+        margin-bottom: 30px;
+    }
+
+
+    .writing-page h1 {
+        font-size: 32px;
+
+        line-height: 1.35;
+    }
+
+
+    .writing-author {
+        font-size: 16px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .writing-content {
+        padding: 35px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .writing-content p {
+        font-size: 17px;
+
+        line-height: 1.9;
+    }
+
+
+    .writing-actions {
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .action-button {
+        padding: 10px 17px;
+
+        font-size: 14px;
+    }
+
+}

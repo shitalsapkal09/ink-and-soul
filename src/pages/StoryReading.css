@@ -1,0 +1,283 @@
+.story-reading-page {
+    min-height: 100vh;
+    background: #FAF7F2;
+    padding: 60px 20px 90px;
+    text-align: center;
+}
+
+
+/* ============================= */
+/* Back Button */
+/* ============================= */
+
+.story-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #6B46A3;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.story-back:hover {
+    color: #8A63C9;
+    transform: translateX(-5px);
+}
+
+.top-story-back {
+    margin-bottom: 40px;
+}
+
+
+/* ============================= */
+/* Story Title */
+/* ============================= */
+
+.story-reading-page h1 {
+    color: #6B46A3;
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    line-height: 1.35;
+    max-width: 900px;
+    margin: 0 auto 15px;
+}
+
+
+/* ============================= */
+/* Author */
+/* ============================= */
+
+.story-author {
+    color: #777;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+/* ============================= */
+/* Story Content */
+/* ============================= */
+
+.story-content {
+    max-width: 850px;
+    margin: 0 auto 40px;
+
+    background: #FFFFFF;
+
+    padding: 55px 65px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    text-align: left;
+}
+
+
+/* Story Text */
+
+.story-content p {
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    margin: 0 0 22px;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================= */
+/* Like / Dislike / Share */
+/* ============================= */
+
+.story-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 45px;
+
+    flex-wrap: wrap;
+}
+
+
+.story-action-button {
+    background: #FFFFFF;
+
+    border: 1px solid #E5DDF0;
+
+    color: #6B46A3;
+
+    padding: 12px 24px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.story-action-button:hover {
+    background: #F1EAF8;
+
+    border-color: #D8C9EA;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(107, 70, 163, 0.10);
+}
+
+
+/* ============================= */
+/* Comments */
+/* ============================= */
+
+.story-comments {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+
+.story-comments h2 {
+    color: #6B46A3;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+.story-comments textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 16px 18px;
+
+    border: 1px solid #E5DDF0;
+
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    color: #555;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+
+.story-comments textarea:focus {
+    border-color: #8A63C9;
+
+    box-shadow:
+        0 0 0 3px rgba(138, 99, 201, 0.08);
+}
+
+
+/* ============================= */
+/* Post Comment */
+/* ============================= */
+
+.story-comment-button {
+    margin-top: 15px;
+
+    background: #6B46A3;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    padding: 12px 26px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.story-comment-button:hover {
+    background: #8A63C9;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .story-reading-page {
+        padding: 45px 18px 70px;
+    }
+
+    .story-reading-page h1 {
+        font-size: 32px;
+    }
+
+    .story-author {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .story-content {
+        padding: 35px 22px;
+        border-radius: 18px;
+    }
+
+    .story-content p {
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .story-actions {
+        gap: 10px;
+    }
+
+    .story-action-button {
+        padding: 10px 17px;
+        font-size: 14px;
+    }
+
+    .story-comments h2 {
+        font-size: 24px;
+    }
+
+}

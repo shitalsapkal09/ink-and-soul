@@ -1,0 +1,124 @@
+.my-world-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  padding: 80px 8%;
+  text-align: center;
+}
+
+/* Page Heading */
+.my-world-page h1 {
+  font-size: 52px;
+  color: #6b46a3;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.my-world-subtitle {
+  color: #666;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+/* Cards Container */
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Remove Link Styling */
+.world-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Individual Card */
+.world-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 45px 30px;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Card Hover */
+.world-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(107, 70, 163, 0.15);
+}
+
+/* Card Heading */
+.world-card h2 {
+  color: #6b46a3;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Card Description */
+.world-card p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+
+/* Explore Text */
+.world-card span {
+  color: #6b46a3;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.world-card:hover span {
+  letter-spacing: 1px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .world-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .my-world-page {
+    padding: 60px 6%;
+  }
+
+  .my-world-page h1 {
+    font-size: 40px;
+  }
+
+  .my-world-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .world-card {
+    padding: 40px 25px;
+  }
+
+  .world-card h2 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,21 @@
+.language-page {
+  min-height: 70vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: #faf7f2;
+}
+
+.language-page h1 {
+  color: #6b46a3;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.language-page p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 10px auto;
+}

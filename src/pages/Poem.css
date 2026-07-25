@@ -1,0 +1,42 @@
+.poem-page{
+    max-width:900px;
+    margin:auto;
+    padding:60px 20px;
+    text-align:center;
+    background:#FAF7F2;
+}
+
+.poem-page h1{
+    color:#6B46A3;
+    font-size:48px;
+    margin-bottom:10px;
+    font-family:'Playfair Display',serif;
+}
+
+.poem-author{
+    color:#777;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+.poem-image{
+    width:100%;
+    max-width:650px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:30px;
+    text-decoration:none;
+    color:#6B46A3;
+    font-weight:600;
+    font-size:18px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    color:#8B5CF6;
+    transform:translateX(-5px);
+}
