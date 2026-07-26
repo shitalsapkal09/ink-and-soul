@@ -1,6 +1,9 @@
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <h1>Ink & Soul</h1>
@@ -17,9 +20,7 @@ function Hero() {
       <div className="hero-buttons">
         <button
           className="hero-button"
-          onClick={() => {
-            window.location.href = "/my-world";
-          }}
+          onClick={() => navigate("/my-world")}
         >
           Welcome to My World
         </button>
