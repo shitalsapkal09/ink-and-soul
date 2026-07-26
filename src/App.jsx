@@ -19,6 +19,11 @@ import StoryReading from "./pages/StoryReading";
 import MyWorld from "./pages/MyWorld";
 import Quotes from "./pages/Quotes";
 
+
+/* ===========================
+   HOME PAGE
+=========================== */
+
 function HomePage() {
   return (
     <>
@@ -29,14 +34,23 @@ function HomePage() {
   );
 }
 
+
+/* ===========================
+   MAIN APP
+=========================== */
+
 function App() {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
 
+      {/* All Routes */}
       <Routes>
 
-        {/* Home */}
+        {/* ===========================
+           HOME
+        =========================== */}
 
         <Route
           path="/"
@@ -44,7 +58,11 @@ function App() {
         />
 
 
-        {/* My World */}
+        {/* ===========================
+           MY WORLD
+           URL:
+           /my-world
+        =========================== */}
 
         <Route
           path="/my-world"
@@ -52,22 +70,30 @@ function App() {
         />
 
 
-        {/* Poetry */}
+        {/* ===========================
+           POETRY COLLECTION
+        =========================== */}
 
         <Route
           path="/poetry"
           element={<Poetry />}
         />
 
+        {/* Marathi Poetry */}
+
         <Route
           path="/poetry/marathi"
           element={<Marathi />}
         />
 
+        {/* Hindi Poetry */}
+
         <Route
           path="/poetry/hindi"
           element={<Hindi />}
         />
+
+        {/* English Poetry */}
 
         <Route
           path="/poetry/english"
@@ -75,7 +101,9 @@ function App() {
         />
 
 
-        {/* Quotes & Shayari */}
+        {/* ===========================
+           QUOTES & SHAYARI
+        =========================== */}
 
         <Route
           path="/quotes"
@@ -83,7 +111,9 @@ function App() {
         />
 
 
-        {/* Stories Collection */}
+        {/* ===========================
+           STORIES COLLECTION
+        =========================== */}
 
         <Route
           path="/stories"
@@ -91,7 +121,9 @@ function App() {
         />
 
 
-        {/* Poetry Reading Template */}
+        {/* ===========================
+           POETRY / QUOTE READING
+        =========================== */}
 
         <Route
           path="/writing/:language/:id"
@@ -99,7 +131,9 @@ function App() {
         />
 
 
-        {/* Story Reading Template */}
+        {/* ===========================
+           STORY READING
+        =========================== */}
 
         <Route
           path="/story/:id"
@@ -107,7 +141,9 @@ function App() {
         />
 
 
-        {/* About */}
+        {/* ===========================
+           ABOUT
+        =========================== */}
 
         <Route
           path="/about"
@@ -115,7 +151,9 @@ function App() {
         />
 
 
-        {/* Contact */}
+        {/* ===========================
+           CONTACT
+        =========================== */}
 
         <Route
           path="/contact"
@@ -124,6 +162,7 @@ function App() {
 
       </Routes>
 
+      {/* Footer */}
       <Footer />
     </>
   );
