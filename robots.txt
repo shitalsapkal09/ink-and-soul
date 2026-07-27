@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ink-and-soul.netlify.app/sitemap.xml
