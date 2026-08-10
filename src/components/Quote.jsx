@@ -1,6 +1,6 @@
 function Quote() {
   return (
-    <section className="quote">
+    <section className="quote-section">
 
       <p className="quote-text">
         “Every heart has a story.

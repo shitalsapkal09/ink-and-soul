@@ -1,779 +1,554 @@
-/* ===========================
-   GOOGLE FONT
-=========================== */
+/* =========================================
+   GOOGLE FONTS
+========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 
-/* ===========================
-   GLOBAL
-=========================== */
+/* =========================================
+   GLOBAL RESET
+========================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
-body {
-    width: 100%;
-    overflow-x: hidden;
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #F8F4EE;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: #F8F4EE;
+  color: #333;
+  overflow-x: hidden;
 }
 
 
-/* ===========================
+/* =========================================
+   MAIN APP
+========================================= */
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
    NAVBAR
-   DESKTOP / LAPTOP
-=========================== */
+========================================= */
 
 .navbar {
-    display: flex;
+  width: 100%;
+  min-height: 95px;
 
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    align-items: center;
+  padding: 18px 5%;
 
-    padding: 25px 80px;
+  background: #ffffff;
 
-    background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 
-/* ===========================
+/* =========================================
    LOGO
-=========================== */
+========================================= */
 
 .logo {
-    font-size: 45px;
+  font-family: 'Playfair Display', serif;
 
-    font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
 
-    color: #6B46A3;
+  color: #6B46A3;
 
-    font-weight: bold;
+  white-space: nowrap;
 }
 
 
-/* ===========================
-   DESKTOP MENU
-=========================== */
+/* =========================================
+   NAVIGATION MENU
+========================================= */
 
 .menu {
-    display: flex;
+  display: flex;
+  align-items: center;
 
-    list-style: none;
+  list-style: none;
 
-    gap: 40px;
+  gap: 38px;
+
+  margin: 0;
+  padding: 0;
 }
-
 
 .menu li {
-    list-style: none;
-
-    cursor: pointer;
-
-    color: #555;
-
-    font-size: 20px;
-
-    transition: 0.3s;
+  list-style: none;
 }
 
 
-.menu li:hover {
-    color: #6B46A3;
-}
-
-
-/* ===========================
-   MENU LINKS
-=========================== */
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
 
 .menu a {
-    text-decoration: none;
+  display: inline-block;
 
-    color: #555;
+  text-decoration: none;
 
-    transition: 0.3s;
+  color: #444;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  padding: 8px 0;
+
+  transition: color 0.25s ease;
 }
-
 
 .menu a:hover {
-    color: #6B46A3;
+  color: #6B46A3;
+}
+
+.menu a:active {
+  color: #6B46A3;
 }
 
 
-/* ===========================
+/* =========================================
    MOBILE MENU BUTTON
-   Hidden on Desktop
-=========================== */
+========================================= */
 
 .menu-toggle {
-    display: none;
+  display: none;
 
-    background: transparent;
+  border: none;
+  background: transparent;
 
-    border: none;
+  color: #6B46A3;
 
-    color: #6B46A3;
+  font-size: 28px;
 
-    cursor: pointer;
+  cursor: pointer;
+
+  padding: 5px;
 }
 
 
-/* ===========================
-   HERO
-=========================== */
+/* =========================================
+   HERO SECTION
+========================================= */
 
 .hero {
-    min-height: 80vh;
+  min-height: 55vh;
 
-    display: flex;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 50px 20px;
+
+  background: #F8F4EE;
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  color: #6B46A3;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   HERO SUBTITLE
+========================================= */
+
+.subtitle {
+  font-size: 20px;
+
+  color: #6B46A3;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+  max-width: 650px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.hero-button {
+  border: none;
+
+  background: #6B46A3;
+
+  color: white;
+
+  padding: 12px 28px;
+
+  border-radius: 30px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hero-button:hover {
+  background: #563486;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   QUOTE SECTION
+========================================= */
+
+.quote-section {
+  width: 100%;
+
+  padding: 45px 20px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.quote-text {
+  max-width: 750px;
+
+  margin: 0 auto 18px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  line-height: 1.5;
+
+  color: #6B46A3;
+}
+
+.quote-section span {
+  display: block;
+
+  font-size: 16px;
+
+  color: #666;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  background: #F8F4EE;
+
+  text-align: center;
+}
+
+.about-section h1,
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+
+  color: #6B46A3;
+
+  margin-bottom: 20px;
+}
+
+.about-section h1 {
+  font-size: clamp(40px, 5vw, 62px);
+}
+
+.about-section h2 {
+  font-size: 35px;
+}
+
+.about-section p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #555;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   GENERAL PAGE
+========================================= */
+
+.page {
+  width: 100%;
+
+  min-height: auto;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background: #F8F4EE;
+}
+
+.page h1 {
+  font-family: 'Playfair Display', serif;
+
+  color: #6B46A3;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  margin-bottom: 18px;
+}
+
+.page p {
+  color: #555;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 30px 20px 25px;
+
+  background: #F8F4EE;
+
+  border-top: 1px solid #e8e0d8;
+
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 8px;
+
+  color: #555;
+
+  font-size: 16px;
+}
+
+footer small {
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    min-height: 80px;
+
+    padding: 15px 25px;
+  }
+
+  .logo {
+    font-size: 34px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    position: sticky;
+
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
 
     flex-direction: column;
 
-    justify-content: center;
-
     align-items: center;
 
-    text-align: center;
+    gap: 0;
 
-    padding: 40px 20px;
-}
+    background: white;
 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
 
-/* ===========================
-   HERO TITLE
-=========================== */
+    padding: 15px 0;
+  }
 
-.hero h1 {
-    font-size: 90px;
-
-    color: #6B46A3;
-
-    font-family: 'Playfair Display', serif;
-
-    margin-bottom: 20px;
-}
-
-
-/* ===========================
-   HERO SUBTITLE
-=========================== */
-
-.hero h2 {
-    font-size: 48px;
-
-    color: #333;
-
-    margin-bottom: 15px;
-}
-
-
-/* ===========================
-   HERO DESCRIPTION
-=========================== */
-
-.hero p {
-    font-size: 24px;
-
-    color: #777;
-
-    margin-bottom: 50px;
-}
-
-
-/* ===========================
-   HERO BUTTONS
-=========================== */
-
-.hero-buttons {
+  .menu.menu-open {
     display: flex;
+  }
 
-    gap: 25px;
-}
-
-
-.hero-buttons button {
-    background: #6B46A3;
-
-    color: white;
-
-    border: none;
-
-    padding: 18px 40px;
-
-    border-radius: 40px;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.hero-buttons button:hover {
-    background: #56348A;
-
-    transform: translateY(-3px);
-}
-
-
-/* ===========================
-   QUOTE
-=========================== */
-
-.quote {
-    padding: 120px 20px;
+  .menu li {
+    width: 100%;
 
     text-align: center;
+  }
+
+  .menu a {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    font-size: 16px;
+  }
+
+  .hero {
+    min-height: 50vh;
+
+    padding: 45px 20px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .quote-section {
+    padding: 40px 20px;
+  }
+
+  .about-section {
+    padding: 45px 20px;
+  }
+
+  footer {
+    padding: 25px 15px 20px;
+  }
 }
 
 
-.quote-text {
-    font-size: 34px;
-
-    font-family: 'Playfair Display', serif;
-
-    color: #6B46A3;
-
-    max-width: 850px;
-
-    margin: auto;
-
-    line-height: 1.8;
-}
-
-
-.quote span {
-    display: block;
-
-    margin-top: 25px;
-
-    font-size: 18px;
-
-    color: #888;
-}
-
-
-/* ===========================
-   ABOUT
-=========================== */
-
-.about {
-    text-align: center;
-
-    padding: 100px 20px;
-
-    max-width: 800px;
-
-    margin: auto;
-}
-
-
-.about h2 {
-    font-size: 42px;
-
-    margin-bottom: 30px;
-
-    color: #6B46A3;
-
-    font-family: 'Playfair Display', serif;
-}
-
-
-.about p {
-    font-size: 22px;
-
-    line-height: 1.8;
-
-    color: #555;
-}
-
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer {
-    text-align: center;
-
-    padding: 40px;
-
-    color: #666;
-}
-
-
-footer p {
-    margin: 10px 0;
-
-    font-size: 18px;
-}
-
-
-/* ==================================================
-   MOBILE VIEW
-   ONLY APPLIES TO SCREEN WIDTH 768px OR SMALLER
-
-   DESKTOP / LAPTOP DESIGN ABOVE REMAINS UNCHANGED
-================================================== */
-
-@media (max-width: 768px) {
-
-
-    /* ===========================
-       MOBILE NAVBAR
-    =========================== */
-
-    .navbar {
-        width: 100%;
-
-        min-height: 70px;
-
-        padding: 15px 20px;
-
-        display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        position: sticky;
-
-        top: 0;
-
-        z-index: 1000;
-    }
-
-
-    /* ===========================
-       MOBILE NAVBAR LOGO
-    =========================== */
-
-    .logo {
-        font-size: 28px;
-
-        font-family: 'Playfair Display', serif;
-
-        font-weight: 700;
-
-        color: #6B46A3;
-
-        line-height: 1;
-
-        white-space: nowrap;
-
-        flex-shrink: 0;
-    }
-
-
-    /* ===========================
-       HAMBURGER BUTTON
-    =========================== */
-
-    .menu-toggle {
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        width: 45px;
-
-        height: 45px;
-
-        padding: 5px;
-
-        background: transparent;
-
-        border: none;
-
-        color: #6B46A3;
-
-        font-size: 30px;
-
-        cursor: pointer;
-
-        z-index: 1002;
-
-        flex-shrink: 0;
-    }
-
-
-    /* ===========================
-       MOBILE MENU
-       HIDDEN BY DEFAULT
-    =========================== */
-
-    .menu {
-        display: none;
-
-        position: absolute;
-
-        top: 100%;
-
-        left: 0;
-
-        width: 100%;
-
-        background: white;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 0;
-
-        padding: 10px 0 15px;
-
-        margin: 0;
-
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-        z-index: 1001;
-    }
-
-
-    /* ===========================
-       SHOW MOBILE MENU
-    =========================== */
-
-    .menu.menu-open {
-        display: flex;
-    }
-
-
-    /* ===========================
-       MOBILE MENU ITEMS
-    =========================== */
-
-    .menu li {
-        width: 100%;
-
-        text-align: center;
-
-        font-size: 16px;
-    }
-
-
-    /* ===========================
-       MOBILE MENU LINKS
-    =========================== */
-
-    .menu li a {
-        display: block;
-
-        width: 100%;
-
-        padding: 14px 20px;
-
-        font-size: 16px;
-
-        color: #555;
-
-        text-decoration: none;
-    }
-
-
-    /* ===========================
-       MOBILE LINK HOVER
-    =========================== */
-
-    .menu li a:hover {
-        background: #F7F1FC;
-
-        color: #6B46A3;
-    }
-
-
-    /* ==================================================
-       MOBILE HERO
-
-       Reduced gap
-       Large Ink & Soul title
-       Same Playfair Display font
-    ================================================== */
-
-    .hero {
-        min-height: auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: flex-start;
-
-        align-items: center;
-
-        text-align: center;
-
-        padding: 80px 20px 60px;
-
-        overflow: hidden;
-    }
-
-
-    /* ===========================
-       MOBILE HERO TITLE
-       INK & SOUL
-    =========================== */
-
-    .hero h1 {
-        font-size: 64px;
-
-        font-family: 'Playfair Display', serif;
-
-        font-weight: 700;
-
-        color: #6B46A3;
-
-        line-height: 1.05;
-
-        white-space: nowrap;
-
-        margin: 0 0 18px;
-    }
-
-
-    /* ===========================
-       MOBILE HERO SUBTITLE
-    =========================== */
-
-    .hero h2 {
-        font-size: 27px;
-
-        font-family: 'Poppins', sans-serif;
-
-        font-weight: 400;
-
-        color: #333;
-
-        line-height: 1.3;
-
-        margin: 0 0 15px;
-    }
-
-
-    /* ===========================
-       MOBILE HERO DESCRIPTION
-    =========================== */
-
-    .hero p {
-        font-size: 18px;
-
-        font-family: 'Poppins', sans-serif;
-
-        font-weight: 400;
-
-        color: #777;
-
-        line-height: 1.6;
-
-        max-width: 500px;
-
-        margin: 0 0 35px;
-    }
-
-
-    /* ===========================
-       MOBILE HERO BUTTONS
-    =========================== */
-
-    .hero-buttons {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 15px;
-    }
-
-
-    .hero-buttons button {
-        width: 90%;
-
-        max-width: 350px;
-
-        padding: 15px 25px;
-
-        font-size: 17px;
-    }
-
-
-    /* ===========================
-       MOBILE QUOTE
-    =========================== */
-
-    .quote {
-        padding: 80px 20px;
-    }
-
-
-    .quote-text {
-        font-size: 25px;
-
-        line-height: 1.6;
-    }
-
-
-    .quote span {
-        font-size: 16px;
-    }
-
-
-    /* ===========================
-       MOBILE ABOUT
-    =========================== */
-
-    .about {
-        padding: 70px 20px;
-    }
-
-
-    .about h2 {
-        font-size: 32px;
-    }
-
-
-    .about p {
-        font-size: 18px;
-
-        line-height: 1.7;
-    }
-
-
-    /* ===========================
-       MOBILE FOOTER
-    =========================== */
-
-    footer {
-        padding: 30px 20px;
-    }
-
-
-    footer p {
-        font-size: 15px;
-    }
-
-}
-
-
-/* ==================================================
-   SMALL MOBILE
-   SCREEN WIDTH 400px OR SMALLER
-================================================== */
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
 
 @media (max-width: 400px) {
 
+  .logo {
+    font-size: 29px;
+  }
 
-    /* ===========================
-       SMALL MOBILE NAVBAR
-    =========================== */
+  .hero h1 {
+    font-size: 45px;
+  }
 
-    .navbar {
-        padding: 14px 16px;
-    }
+  .subtitle {
+    font-size: 17px;
+  }
 
-
-    .logo {
-        font-size: 25px;
-
-        font-family: 'Playfair Display', serif;
-
-        font-weight: 700;
-
-        line-height: 1;
-    }
-
-
-    .menu-toggle {
-        width: 42px;
-
-        height: 42px;
-
-        font-size: 27px;
-    }
-
-
-    /* ===========================
-       SMALL MOBILE HERO
-    =========================== */
-
-    .hero {
-        padding: 70px 15px 50px;
-    }
-
-
-    /* ===========================
-       SMALL MOBILE HERO TITLE
-    =========================== */
-
-    .hero h1 {
-        font-size: 52px;
-
-        font-family: 'Playfair Display', serif;
-
-        font-weight: 700;
-
-        line-height: 1.05;
-
-        white-space: nowrap;
-
-        margin-bottom: 18px;
-    }
-
-
-    /* ===========================
-       SMALL MOBILE SUBTITLE
-    =========================== */
-
-    .hero h2 {
-        font-size: 23px;
-
-        line-height: 1.3;
-    }
-
-
-    /* ===========================
-       SMALL MOBILE DESCRIPTION
-    =========================== */
-
-    .hero p {
-        font-size: 16px;
-
-        line-height: 1.5;
-
-        max-width: 350px;
-    }
-
-
-    /* ===========================
-       SMALL MOBILE BUTTON
-    =========================== */
-
-    .hero-buttons button {
-        width: 95%;
-
-        font-size: 16px;
-    }
-
+  .hero-text {
+    font-size: 15px;
+  }
 }

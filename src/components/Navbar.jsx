@@ -11,13 +11,18 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      {/* Logo */}
-      <div className="logo">
+      {/* LOGO */}
+      <Link
+        to="/my-world"
+        className="logo"
+        onClick={closeMenu}
+      >
         Ink & Soul
-      </div>
+      </Link>
 
-      {/* Mobile Menu Button */}
+      {/* MOBILE MENU BUTTON */}
       <button
+        type="button"
         className="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle navigation menu"
@@ -25,41 +30,69 @@ function Navbar() {
         {menuOpen ? "✕" : "☰"}
       </button>
 
-      {/* Navigation Menu */}
-      <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
+      {/* NAVIGATION MENU */}
+      <ul
+        className={`menu ${
+          menuOpen ? "menu-open" : ""
+        }`}
+      >
 
+        {/* HOME */}
         <li>
-          <Link to="/" onClick={closeMenu}>
+          <Link
+            to="/my-world"
+            onClick={closeMenu}
+          >
             Home
           </Link>
         </li>
 
+        {/* POETRY */}
         <li>
-          <Link to="/poetry" onClick={closeMenu}>
+          <Link
+            to="/poetry"
+            onClick={closeMenu}
+          >
             Poetry Collection
           </Link>
         </li>
 
+        {/* STORIES */}
         <li>
-          <Link to="/stories" onClick={closeMenu}>
+          <Link
+            to="/stories"
+            onClick={closeMenu}
+          >
             Story Collection
           </Link>
         </li>
 
+        {/* QUOTES & SHAYARI */}
         <li>
-          <Link to="/quotes" onClick={closeMenu}>
+          <Link
+            to="/quotes"
+            onClick={closeMenu}
+          >
             Quotes & Shayari
           </Link>
         </li>
 
+        {/* ABOUT */}
         <li>
-          <Link to="/about" onClick={closeMenu}>
+          <Link
+            to="/about"
+            onClick={closeMenu}
+          >
             The Heart Behind the Ink
           </Link>
         </li>
 
+        {/* CONTACT */}
         <li>
-          <Link to="/contact" onClick={closeMenu}>
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+          >
             Let's Connect
           </Link>
         </li>

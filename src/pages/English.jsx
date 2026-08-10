@@ -1,11 +1,14 @@
 import "./English.css";
 import { Link } from "react-router-dom";
-
 import englishPoems from "../data/englishPoems";
 
 function English() {
   return (
     <div className="language-page">
+
+      <Link to="/poetry" className="back-link">
+        ← Poetry Collection
+      </Link>
 
       <h1>English Poetry</h1>
 

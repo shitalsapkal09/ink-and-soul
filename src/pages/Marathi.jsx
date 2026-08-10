@@ -6,6 +6,10 @@ function Marathi() {
   return (
     <div className="marathi-page">
 
+      <Link to="/poetry" className="back-link">
+        ← Poetry Collection
+      </Link>
+
       <h1>मराठी लेखन</h1>
 
       <p className="marathi-subtitle">

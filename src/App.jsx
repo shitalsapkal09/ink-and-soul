@@ -1,159 +1,134 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
 
+import {
+  Navigate,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+// Components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Quote from "./components/Quote";
-import About from "./components/About";
 import Footer from "./components/Footer";
 
+// Pages
 import Poetry from "./pages/Poetry";
 import Marathi from "./pages/Marathi";
 import Hindi from "./pages/Hindi";
 import English from "./pages/English";
+import Quotes from "./pages/Quotes";
 import Stories from "./pages/Stories";
 import Contact from "./pages/Contact";
-import AboutPage from "./pages/About";
 import Writing from "./pages/Writing";
-import StoryReading from "./pages/StoryReading";
-import MyWorld from "./pages/MyWorld";
-import Quotes from "./pages/Quotes";
-
-
-/* ===========================
-   HOME PAGE
-=========================== */
-
-function HomePage() {
-  return (
-    <>
-      <Hero />
-      <Quote />
-      <About />
-    </>
-  );
-}
-
-
-/* ===========================
-   MAIN APP
-=========================== */
+import About from "./pages/About";
 
 function App() {
   return (
     <>
-      {/* Navbar */}
+      {/* =========================
+          NAVBAR
+      ========================= */}
+
       <Navbar />
 
-      {/* All Routes */}
       <Routes>
 
-        {/* ===========================
-           HOME
-        =========================== */}
-
-        <Route
-          path="/"
-          element={<HomePage />}
-        />
-
-
-        {/* ===========================
-           MY WORLD
-           URL:
-           /my-world
-        =========================== */}
+        {/* =========================
+            HOME
+        ========================= */}
 
         <Route
           path="/my-world"
-          element={<MyWorld />}
+          element={
+            <>
+              <Hero />
+              <Quote />
+            </>
+          }
         />
 
+        {/* ROOT → HOME */}
 
-        {/* ===========================
-           POETRY COLLECTION
-        =========================== */}
+        <Route
+          path="/"
+          element={
+            <Navigate
+              to="/my-world"
+              replace
+            />
+          }
+        />
+
+        {/* =========================
+            POETRY
+        ========================= */}
 
         <Route
           path="/poetry"
           element={<Poetry />}
         />
 
-        {/* Marathi Poetry */}
+        {/* MARATHI */}
 
         <Route
           path="/poetry/marathi"
           element={<Marathi />}
         />
 
-        {/* Hindi Poetry */}
+        {/* HINDI */}
 
         <Route
           path="/poetry/hindi"
           element={<Hindi />}
         />
 
-        {/* English Poetry */}
+        {/* ENGLISH */}
 
         <Route
           path="/poetry/english"
           element={<English />}
         />
 
-
-        {/* ===========================
-           QUOTES & SHAYARI
-        =========================== */}
-
-        <Route
-          path="/quotes"
-          element={<Quotes />}
-        />
-
-
-        {/* ===========================
-           STORIES COLLECTION
-        =========================== */}
+        {/* =========================
+            STORIES
+        ========================= */}
 
         <Route
           path="/stories"
           element={<Stories />}
         />
 
+        {/* =========================
+            QUOTES & SHAYARI
+        ========================= */}
 
-        {/* ===========================
-           POETRY / QUOTE READING
-        =========================== */}
+        <Route
+          path="/quotes"
+          element={<Quotes />}
+        />
+
+        {/* =========================
+            INDIVIDUAL WRITING
+        ========================= */}
 
         <Route
           path="/writing/:language/:id"
           element={<Writing />}
         />
 
-
-        {/* ===========================
-           STORY READING
-        =========================== */}
-
-        <Route
-          path="/story/:id"
-          element={<StoryReading />}
-        />
-
-
-        {/* ===========================
-           ABOUT
-        =========================== */}
+        {/* =========================
+            ABOUT
+        ========================= */}
 
         <Route
           path="/about"
-          element={<AboutPage />}
+          element={<About />}
         />
 
-
-        {/* ===========================
-           CONTACT
-        =========================== */}
+        {/* =========================
+            CONTACT
+        ========================= */}
 
         <Route
           path="/contact"
@@ -162,7 +137,10 @@ function App() {
 
       </Routes>
 
-      {/* Footer */}
+      {/* =========================
+          FOOTER
+      ========================= */}
+
       <Footer />
     </>
   );

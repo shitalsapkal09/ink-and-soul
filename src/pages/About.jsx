@@ -13,9 +13,9 @@ function About() {
       <p>
         Some journeys are planned. Some simply unfold. And some lead us back
         to the one thing that was always meant to be ours. My journey has taken
-        me through many turns—from being a <strong>topper in academics </strong>
-         and dreaming of MPSC, to becoming an <strong>ENTC engineer</strong> and
-        beginning my professional journey as an <strong> IT Engineer at Infosys. </strong>
+        me through many turns—from being a <strong>topper in academics</strong>
+        and dreaming of MPSC, to becoming an <strong>ENTC engineer</strong> and
+        beginning my professional journey as an <strong>IT Engineer at Infosys.</strong>
         Every turn taught me something. Every chapter changed me a little. But
         through all these changes, there was one thing that never left me—
         <strong> my writing.</strong>
@@ -24,7 +24,7 @@ function About() {
       <p>
         For years, I have written poems, thoughts, and stories because writing
         is where I find myself. It is where my emotions, thoughts, memories,
-        and dreams find a place in words. <strong> Writing is not just something
+        and dreams find a place in words. <strong>Writing is not just something
         I do. It is a part of who I am.</strong> That is why <strong>Ink & Soul</strong>
         was born. This is not just a website or a source of income.
         <strong> It is a little piece of my life.</strong> Every poem carries
@@ -42,7 +42,7 @@ function About() {
 
       <div className="about-sign-off">
         <p>With love,</p>
-        <p className="about-author">__Shital🌷</p>
+        <p className="about-author">__Shital 🌷</p>
       </div>
 
     </section>

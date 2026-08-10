@@ -1,42 +1,113 @@
-.poem-page{
-    max-width:900px;
-    margin:auto;
-    padding:60px 20px;
-    text-align:center;
-    background:#FAF7F2;
+/* =========================
+   POEM READING PAGE
+========================= */
+
+.poem-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+  text-align: center;
+  background: #faf7f2;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.poem-page h1{
-    color:#6B46A3;
-    font-size:48px;
-    margin-bottom:10px;
-    font-family:'Playfair Display',serif;
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #6b46a3;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
 
-.poem-author{
-    color:#777;
-    margin-bottom:40px;
-    font-size:18px;
+.back-btn:hover {
+  color: #8b5cf6;
+  transform: translateX(-5px);
 }
 
-.poem-image{
-    width:100%;
-    max-width:650px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+/* =========================
+   POEM TITLE
+========================= */
+
+.poem-page h1 {
+  color: #6b46a3;
+  font-size: 48px;
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
 }
 
-.back-btn{
-    display:inline-block;
-    margin-bottom:30px;
-    text-decoration:none;
-    color:#6B46A3;
-    font-weight:600;
-    font-size:18px;
-    transition:.3s;
+/* =========================
+   AUTHOR
+========================= */
+
+.poem-author {
+  color: #777;
+  margin-bottom: 40px;
+  font-size: 18px;
 }
 
-.back-btn:hover{
-    color:#8B5CF6;
-    transform:translateX(-5px);
+/* =========================
+   POEM IMAGE
+========================= */
+
+.poem-image {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   POEM TEXT
+========================= */
+
+.poem-content {
+  max-width: 750px;
+  margin: 40px auto 0;
+  text-align: left;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .poem-page {
+    padding: 45px 18px 60px;
+  }
+
+  .poem-page h1 {
+    font-size: 38px;
+  }
+
+  .poem-author {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .poem-image {
+    border-radius: 15px;
+  }
+
+  .poem-content {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .back-btn {
+    font-size: 16px;
+  }
 }

@@ -1,11 +1,9 @@
 import "../App.css";
-import { useNavigate } from "react-router-dom";
 
 function Hero() {
-  const navigate = useNavigate();
-
   return (
     <section className="hero">
+
       <h1>Ink & Soul</h1>
 
       <p className="subtitle">
@@ -13,18 +11,9 @@ function Hero() {
       </p>
 
       <p className="hero-text">
-        Explore heartfelt poems and meaningful stories
-        written from the soul.
+        Explore heartfelt poems and meaningful stories written from the soul.
       </p>
 
-      <div className="hero-buttons">
-        <button
-          className="hero-button"
-          onClick={() => navigate("/my-world")}
-        >
-          Welcome to My World
-        </button>
-      </div>
     </section>
   );
 }

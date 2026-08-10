@@ -1,11 +1,14 @@
 import "./Hindi.css";
 import { Link } from "react-router-dom";
-
 import hindiPoems from "../data/hindiPoems";
 
 function Hindi() {
   return (
     <div className="language-page">
+
+      <Link to="/poetry" className="back-link">
+        ← Poetry Collection
+      </Link>
 
       <h1>Hindi Poetry</h1>
 

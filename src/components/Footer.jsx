@@ -2,9 +2,13 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <p>✍️ Curated with love by Shital Sapkal</p>
+      <p>
+        ✍️ Curated with love by Shital Sapkal
+      </p>
 
-      <small>© 2026 Ink & Soul</small>
+      <small>
+        © 2026 Ink & Soul
+      </small>
 
     </footer>
   );

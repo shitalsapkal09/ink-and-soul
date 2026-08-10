@@ -1,222 +1,335 @@
+/* =========================================
+   WRITING PAGE
+========================================= */
+
 .writing-page {
-    min-height: 100vh;
-    background: #FAF7F2;
-    padding: 60px 20px 90px;
-    text-align: center;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 55px 60px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(107, 70, 163, 0.10);
+  box-sizing: border-box;
+  text-align: center;
+  color: #333;
 }
 
 
-/* ============================= */
-/* Back Button */
-/* ============================= */
-
-.top-back {
-    margin-bottom: 40px;
-}
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 .writing-back {
-    display: inline-block;
-    text-decoration: none;
-    color: #6B46A3;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  color: #6b46a3;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .writing-back:hover {
-    color: #8A63C9;
-    transform: translateX(-5px);
+  color: #8a63c9;
+  transform: translateX(-5px);
+}
+
+.top-back {
+  display: block;
+  text-align: left;
+  margin-bottom: 35px;
 }
 
 
-/* ============================= */
-/* Writing Title */
-/* ============================= */
+/* =========================================
+   TITLE
+========================================= */
 
 .writing-page h1 {
-    color: #6B46A3;
-    font-family: 'Playfair Display', serif;
-    font-size: 46px;
-    line-height: 1.3;
-    margin: 0 auto 15px;
-    max-width: 850px;
+  color: #6b46a3;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  line-height: 1.3;
+  margin: 0 0 12px;
 }
 
 
-/* ============================= */
-/* Author */
-/* ============================= */
+/* =========================================
+   AUTHOR
+========================================= */
 
 .writing-author {
-    color: #777;
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    margin-bottom: 45px;
+  color: #777;
+  font-size: 18px;
+  margin: 0 0 40px;
 }
 
 
-/* ============================= */
-/* Writing Content */
-/* ============================= */
+/* =========================================
+   WRITING CONTENT
+========================================= */
 
 .writing-content {
-    max-width: 750px;
-    margin: 0 auto 40px;
-
-    background: #FFFFFF;
-
-    padding: 55px 60px;
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
-
-    text-align: left;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 2;
+  color: #333;
 }
-
-
-/* ============================= */
-/* Writing Text */
-/* ============================= */
 
 .writing-content p {
-    color: #555;
-
-    font-size: 19px;
-
-    line-height: 2;
-
-    margin: 0 0 20px;
-
-    white-space: pre-line;
-}
-
-.writing-content p:last-child {
-    margin-bottom: 0;
+  margin: 0 0 22px;
 }
 
 
-/* ============================= */
-/* Like / Dislike / Share */
-/* ============================= */
+/* =========================================
+   WRITING ACTIONS
+========================================= */
 
 .writing-actions {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin: 0 auto;
-
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 45px auto 20px;
+  flex-wrap: wrap;
 }
-
 
 .action-button {
-    background: #FFFFFF;
-
-    border: 1px solid #E5DDF0;
-
-    color: #6B46A3;
-
-    padding: 12px 24px;
-
-    border-radius: 25px;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
+  border: 1px solid #d9c4ee;
+  background: white;
+  color: #6b46a3;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-
 
 .action-button:hover {
-    background: #F1EAF8;
-
-    border-color: #D8C9EA;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 6px 15px rgba(107, 70, 163, 0.10);
+  background: #f7f0ff;
 }
-
-
-/* ============================= */
-/* Active Like / Dislike / Share */
-/* ============================= */
 
 .action-button.active {
-    background: #F1EAF8;
-
-    border-color: #6B46A3;
-
-    color: #6B46A3;
+  background: #f3eaff;
+  border-color: #7b4db3;
 }
 
 
-/* ============================= */
-/* Mobile Responsive */
-/* ============================= */
+/* =========================================
+   COMMENTS SECTION
+========================================= */
 
-@media (max-width: 600px) {
+.comments-section {
+  width: 100%;
+  max-width: 820px;
+  margin: 45px auto 0;
+  text-align: center;
+}
 
-    .writing-page {
-        padding: 45px 18px 70px;
-    }
-
-
-    .top-back {
-        margin-bottom: 30px;
-    }
-
-
-    .writing-page h1 {
-        font-size: 32px;
-
-        line-height: 1.35;
-    }
+.comments-section h2 {
+  margin-bottom: 25px;
+  color: #6b46a3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+}
 
 
-    .writing-author {
-        font-size: 16px;
+/* =========================================
+   COMMENT BOX
+========================================= */
 
-        margin-bottom: 30px;
-    }
+.comment-box {
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #eadff3;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 0 auto 28px;
+  box-shadow: 0 5px 20px rgba(107, 70, 163, 0.08);
+}
+
+.comment-name-input,
+.comment-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd2e8;
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.comment-name-input:focus,
+.comment-box textarea:focus {
+  border-color: #7b4db3;
+}
+
+.comment-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.comment-name-input::placeholder,
+.comment-box textarea::placeholder {
+  color: #999;
+}
 
 
-    .writing-content {
-        padding: 35px 22px;
+/* =========================================
+   COMMENT BUTTON
+========================================= */
 
-        border-radius: 18px;
-    }
+.comment-button {
+  display: block;
+  border: none;
+  background: #7046a8;
+  color: white;
+  padding: 11px 25px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comment-button:hover {
+  background: #5e3991;
+}
+
+.comment-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 
-    .writing-content p {
-        font-size: 17px;
+/* =========================================
+   COMMENTS LIST
+========================================= */
 
-        line-height: 1.9;
-    }
+.comments-list {
+  width: 100%;
+}
+
+.comment {
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #eadff3;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  text-align: left;
+  box-shadow: 0 5px 18px rgba(107, 70, 163, 0.06);
+}
+
+.comment-body {
+  width: 100%;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.comment-header strong {
+  color: #6b46a3;
+  font-size: 17px;
+}
+
+.comment-time {
+  color: #555;
+  font-size: 14px;
+}
+
+.comment p {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.delete-comment-button {
+  border: none;
+  background: transparent;
+  color: #999;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.delete-comment-button:hover {
+  color: #d9534f;
+}
+
+.no-comments {
+  color: #777;
+  text-align: center;
+  margin: 20px 0;
+}
 
 
-    .writing-actions {
-        gap: 10px;
+/* =========================================
+   MOBILE
+========================================= */
 
-        margin-bottom: 20px;
-    }
+@media (max-width: 700px) {
 
+  .writing-page {
+    width: 92%;
+    margin: 30px auto;
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
 
-    .action-button {
-        padding: 10px 17px;
+  .writing-page h1 {
+    font-size: 36px;
+  }
 
-        font-size: 14px;
-    }
+  .writing-author {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 
+  .writing-content {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .writing-actions {
+    gap: 10px;
+    margin-top: 35px;
+  }
+
+  .action-button {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  .comments-section {
+    width: 100%;
+  }
+
+  .comments-section h2 {
+    font-size: 27px;
+  }
+
+  .comment-box {
+    padding: 15px;
+  }
+
+  .comment-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
 }

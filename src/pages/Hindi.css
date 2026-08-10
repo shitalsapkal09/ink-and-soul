@@ -1,21 +1,102 @@
 .language-page {
-  min-height: 70vh;
-  padding: 80px 20px;
+  min-height: 100vh;
+  background: #FAF7F2;
+  padding: 70px 30px 80px;
   text-align: center;
-  background: #faf7f2;
 }
 
 .language-page h1 {
-  color: #6b46a3;
-  font-family: "Playfair Display", serif;
-  font-size: 42px;
-  margin-bottom: 20px;
+  color: #6B46A3;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin: 25px 0 15px;
 }
 
-.language-page p {
-  color: #555;
+.language-subtitle {
+  color: #777;
+  font-size: 19px;
+  margin-bottom: 50px;
+}
+
+.poems-container {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.poem-card {
+  background: #FFFFFF;
+  padding: 45px 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s;
+}
+
+.poem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(107, 70, 163, 0.15);
+}
+
+.poem-card h2 {
+  color: #6B46A3;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.poem-read-link {
+  color: #6B46A3;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.poem-read-link:hover {
+  color: #8A63C9;
+}
+
+.back-link {
+  display: inline-block;
+  color: #6B46A3;
+  text-decoration: none;
   font-size: 18px;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 10px auto;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  color: #8A63C9;
+  transform: translateX(-5px);
+}
+
+@media (max-width: 700px) {
+  .language-page {
+    padding: 50px 20px 70px;
+  }
+
+  .language-page h1 {
+    font-size: 38px;
+  }
+
+  .language-subtitle {
+    font-size: 17px;
+  }
+
+  .poems-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .poem-card {
+    padding: 35px 20px;
+  }
+
+  .poem-card h2 {
+    font-size: 24px;
+  }
 }
