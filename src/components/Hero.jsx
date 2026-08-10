@@ -13,7 +13,10 @@ function Hero() {
       </p>
 
       <div className="hero-buttons">
-        <Link to="/my-world" className="hero-button">
+        <Link
+          to="/my-world"
+          className="hero-button"
+        >
           Welcome to My World
         </Link>
       </div>

@@ -13,6 +13,7 @@ import Quote from "./components/Quote";
 import Footer from "./components/Footer";
 
 // Pages
+import MyWorld from "./pages/MyWorld";
 import Poetry from "./pages/Poetry";
 import Marathi from "./pages/Marathi";
 import Hindi from "./pages/Hindi";
@@ -26,10 +27,6 @@ import About from "./pages/About";
 function App() {
   return (
     <>
-      {/* =========================
-          NAVBAR
-      ========================= */}
-
       <Navbar />
 
       <Routes>
@@ -39,7 +36,7 @@ function App() {
         ========================= */}
 
         <Route
-          path="/my-world"
+          path="/"
           element={
             <>
               <Hero />
@@ -48,16 +45,13 @@ function App() {
           }
         />
 
-        {/* ROOT → HOME */}
+        {/* =========================
+            MY WORLD
+        ========================= */}
 
         <Route
-          path="/"
-          element={
-            <Navigate
-              to="/my-world"
-              replace
-            />
-          }
+          path="/my-world"
+          element={<MyWorld />}
         />
 
         {/* =========================
@@ -69,21 +63,15 @@ function App() {
           element={<Poetry />}
         />
 
-        {/* MARATHI */}
-
         <Route
           path="/poetry/marathi"
           element={<Marathi />}
         />
 
-        {/* HINDI */}
-
         <Route
           path="/poetry/hindi"
           element={<Hindi />}
         />
-
-        {/* ENGLISH */}
 
         <Route
           path="/poetry/english"
@@ -136,10 +124,6 @@ function App() {
         />
 
       </Routes>
-
-      {/* =========================
-          FOOTER
-      ========================= */}
 
       <Footer />
     </>
