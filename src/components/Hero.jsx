@@ -1,4 +1,4 @@
-import "../App.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -6,13 +6,17 @@ function Hero() {
 
       <h1>Ink & Soul</h1>
 
-      <p className="subtitle">
-        ❦ Poetry • Stories • Emotions ❦
-      </p>
+      <h2>❦ Poetry • Stories • Emotions ❦</h2>
 
-      <p className="hero-text">
+      <p>
         Explore heartfelt poems and meaningful stories written from the soul.
       </p>
+
+      <div className="hero-buttons">
+        <Link to="/my-world" className="hero-button">
+          Welcome to My World
+        </Link>
+      </div>
 
     </section>
   );
