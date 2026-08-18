@@ -13,7 +13,7 @@ function Navbar() {
 
       {/* LOGO */}
       <Link
-        to="/my-world"
+        to="/"
         className="logo"
         onClick={closeMenu}
       >
@@ -40,7 +40,7 @@ function Navbar() {
         {/* HOME */}
         <li>
           <Link
-            to="/my-world"
+            to="/"
             onClick={closeMenu}
           >
             Home

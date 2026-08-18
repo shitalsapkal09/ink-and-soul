@@ -1,113 +1,367 @@
-/* =========================
-   POEM READING PAGE
-========================= */
+/* ================================
+   MY WORLD PAGE
+================================ */
 
-.poem-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 20px 80px;
-  text-align: center;
-  background: #faf7f2;
+.my-world-page {
   min-height: 100vh;
-  box-sizing: border-box;
+  background: #faf7f2;
+  padding: 50px 8% 80px;
+  text-align: center;
+  position: relative;
 }
 
-/* =========================
-   BACK BUTTON
-========================= */
 
-.back-btn {
-  display: inline-block;
-  margin-bottom: 30px;
-  text-decoration: none;
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 6%;
+
+  border: none;
+  background: transparent;
+
   color: #6b46a3;
-  font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
+  font-family: inherit;
+
+  cursor: pointer;
+
   transition: 0.3s ease;
 }
 
-.back-btn:hover {
-  color: #8b5cf6;
+.back-button:hover {
   transform: translateX(-5px);
 }
 
-/* =========================
-   POEM TITLE
-========================= */
 
-.poem-page h1 {
+/* ================================
+   HEADER
+================================ */
+
+.my-world-header {
+  max-width: 800px;
+  margin: 40px auto 65px;
+}
+
+
+/* Small Heading */
+
+.my-world-small-title {
+  color: #8b6bb1;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+/* Main Heading */
+
+.my-world-page h1 {
+  font-size: 58px;
   color: #6b46a3;
-  font-size: 48px;
-  margin: 0 0 10px;
+  margin: 0;
+
   font-family: "Playfair Display", serif;
-  line-height: 1.2;
+  font-weight: 600;
 }
 
-/* =========================
-   AUTHOR
-========================= */
 
-.poem-author {
-  color: #777;
-  margin-bottom: 40px;
-  font-size: 18px;
+/* Divider */
+
+.world-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 18px auto;
+  color: #8b6bb1;
 }
 
-/* =========================
-   POEM IMAGE
-========================= */
-
-.poem-image {
-  display: block;
-  width: 100%;
-  max-width: 650px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.world-divider::before,
+.world-divider::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background: #d8c9e7;
 }
 
-/* =========================
-   POEM TEXT
-========================= */
+.world-divider span {
+  margin: 0 15px;
+  font-size: 22px;
+}
 
-.poem-content {
-  max-width: 750px;
-  margin: 40px auto 0;
-  text-align: left;
-  color: #444;
-  font-size: 18px;
+
+/* Subtitle */
+
+.my-world-subtitle {
+  color: #666;
+
+  font-size: 17px;
   line-height: 1.9;
+
+  max-width: 650px;
+  margin: 0 auto;
 }
 
-/* =========================
+
+/* ================================
+   CARDS
+================================ */
+
+.world-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* Link */
+
+.world-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+/* Card */
+
+.world-card {
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #eee6f4;
+
+  border-radius: 22px;
+
+  padding: 42px 30px;
+
+  min-height: 290px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 12px 35px rgba(70, 45, 90, 0.07);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* Card Hover */
+
+.world-card-link:hover .world-card {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 20px 45px rgba(107, 70, 163, 0.16);
+
+  border-color: #d8c9e7;
+}
+
+
+/* ================================
+   CARD ICON
+================================ */
+
+.world-card-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1eaf8;
+
+  color: #6b46a3;
+
+  font-size: 27px;
+
+  margin-bottom: 22px;
+
+  transition: 0.35s ease;
+}
+
+
+.world-card-link:hover .world-card-icon {
+  transform: scale(1.08);
+  background: #6b46a3;
+  color: white;
+}
+
+
+/* ================================
+   CARD TITLE
+================================ */
+
+.world-card h2 {
+  color: #6b46a3;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+
+  margin: 0 0 15px;
+}
+
+
+/* ================================
+   CARD DESCRIPTION
+================================ */
+
+.world-card p {
+  color: #666;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+
+  max-width: 280px;
+
+  margin: 0 0 22px;
+}
+
+
+/* ================================
+   EXPLORE
+================================ */
+
+.world-card span {
+  color: #6b46a3;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+
+.world-card-link:hover .world-card span {
+  letter-spacing: 0.8px;
+}
+
+
+/* ================================
+   BOTTOM QUOTE
+================================ */
+
+.world-bottom-quote {
+  max-width: 650px;
+
+  margin: 75px auto 0;
+
+  padding-top: 35px;
+
+  border-top: 1px solid #e5dce9;
+}
+
+
+.world-bottom-quote p {
+  font-family: "Playfair Display", serif;
+
+  color: #6b46a3;
+
+  font-size: 22px;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  margin-bottom: 10px;
+}
+
+
+.world-bottom-quote span {
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .world-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+}
+
+
+/* ================================
    MOBILE
-========================= */
+================================ */
 
-@media (max-width: 700px) {
-  .poem-page {
-    padding: 45px 18px 60px;
+@media (max-width: 600px) {
+
+  .my-world-page {
+    padding: 45px 6% 60px;
   }
 
-  .poem-page h1 {
-    font-size: 38px;
+  .back-button {
+    position: static;
+
+    display: block;
+
+    margin-bottom: 35px;
   }
 
-  .poem-author {
-    font-size: 16px;
-    margin-bottom: 30px;
+  .my-world-header {
+    margin-top: 10px;
+    margin-bottom: 45px;
   }
 
-  .poem-image {
-    border-radius: 15px;
+  .my-world-page h1 {
+    font-size: 40px;
   }
 
-  .poem-content {
-    font-size: 16px;
-    line-height: 1.8;
+  .my-world-small-title {
+    font-size: 11px;
+    letter-spacing: 2px;
   }
 
-  .back-btn {
-    font-size: 16px;
+  .my-world-subtitle {
+    font-size: 15px;
   }
+
+  .world-card {
+    padding: 38px 25px;
+    min-height: 270px;
+  }
+
+  .world-card h2 {
+    font-size: 26px;
+  }
+
+  .world-bottom-quote {
+    margin-top: 55px;
+  }
+
+  .world-bottom-quote p {
+    font-size: 19px;
+  }
+
 }

@@ -1,7 +1,6 @@
 import "./App.css";
 
 import {
-  Navigate,
   Routes,
   Route,
 } from "react-router-dom";
@@ -32,7 +31,7 @@ function App() {
       <Routes>
 
         {/* =========================
-            HOME
+            MAIN HOME PAGE
         ========================= */}
 
         <Route
