@@ -676,12 +676,7 @@ function Writing() {
 
         <div className="comments-list">
 
-          {comments.length === 0 ? (
-            <p className="no-comments">
-              No comments yet. Be the first
-              to share your thoughts.
-            </p>
-          ) : (
+          {comments.length > 0 &&
             comments.map((comment) => (
               <div
                 className="comment"
@@ -734,8 +729,7 @@ function Writing() {
                 </div>
 
               </div>
-            ))
-          )}
+            ))}
 
         </div>
 
