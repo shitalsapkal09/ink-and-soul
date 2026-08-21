@@ -1,8 +1,10 @@
+import React from "react";
 import "./App.css";
 
 import {
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
 
 // Components
@@ -23,10 +25,23 @@ import Contact from "./pages/Contact";
 import Writing from "./pages/Writing";
 import About from "./pages/About";
 
+// Scroll to top whenever the route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
       <Navbar />
+
+      <ScrollToTop />
 
       <Routes>
 
