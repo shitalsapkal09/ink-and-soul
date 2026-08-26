@@ -37,6 +37,7 @@
 /* Quote Card */
 
 .quote-card {
+    position: relative;
     background: #FFFFFF;
     border-radius: 20px;
     padding: 40px 35px;
@@ -54,6 +55,20 @@
 .quote-card:hover {
     transform: translateY(-7px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Recently Published */
+
+.recently-published {
+    display: inline-block;
+    align-self: center;
+    background: #F3E8FF;
+    color: #6B46A3;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin-bottom: 18px;
 }
 
 /* Quote Title */
@@ -137,4 +152,8 @@
         font-size: 15px;
     }
 
+    .recently-published {
+        font-size: 13px;
+        padding: 6px 13px;
+    }
 }
