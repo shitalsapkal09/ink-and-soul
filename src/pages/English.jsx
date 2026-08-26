@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import englishPoems from "../data/englishPoems";
 
 function English() {
+  const latestPoems = [...englishPoems].reverse();
+
   return (
     <div className="language-page">
 
-      <Link to="/poetry" className="back-link">
+      <Link
+        to="/poetry"
+        className="back-link"
+      >
         ← Poetry Collection
       </Link>
 
@@ -18,11 +23,17 @@ function English() {
 
       <div className="poems-container">
 
-        {englishPoems.map((poem) => (
+        {latestPoems.map((poem, index) => (
           <article
             className="poem-card"
             key={poem.id}
           >
+
+            {index === 0 && (
+              <div className="recent-badge">
+                ✨ Recently Published
+              </div>
+            )}
 
             <h2>
               {poem.title}

@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import marathiPoems from "../data/marathiPoems";
 
 function Marathi() {
+  const latestPoems = [...marathiPoems].reverse();
+
   return (
     <div className="marathi-page">
 
-      <Link to="/poetry" className="back-link">
+      <Link
+        to="/poetry"
+        className="back-link"
+      >
         ← Poetry Collection
       </Link>
 
@@ -18,12 +23,25 @@ function Marathi() {
 
       <div className="marathi-grid">
 
-        {marathiPoems.map((poem) => (
-          <div className="marathi-card" key={poem.id}>
+        {latestPoems.map((poem, index) => (
+          <div
+            className="marathi-card"
+            key={poem.id}
+          >
 
-            <h2>{poem.title}</h2>
+            {index === 0 && (
+              <div className="recent-badge">
+                ✨ Recently Published
+              </div>
+            )}
 
-            <Link to={`/writing/marathi/${poem.id}`}>
+            <h2>
+              {poem.title}
+            </h2>
+
+            <Link
+              to={`/writing/marathi/${poem.id}`}
+            >
               Read →
             </Link>
 
@@ -32,7 +50,10 @@ function Marathi() {
 
       </div>
 
-      <Link to="/poetry" className="back-link">
+      <Link
+        to="/poetry"
+        className="back-link"
+      >
         ← Back to Poetry
       </Link>
 

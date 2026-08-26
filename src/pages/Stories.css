@@ -6,6 +6,7 @@
 }
 
 /* Main Heading */
+
 .stories-page h1 {
     font-size: 55px;
     color: #6B46A3;
@@ -14,6 +15,7 @@
 }
 
 /* Subtitle */
+
 .stories-subtitle {
     color: #666;
     font-size: 18px;
@@ -23,20 +25,24 @@
 }
 
 /* Stories Container */
+
 .stories-container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* Individual Story */
+/* Story Card */
+
 .story-card {
     background: #FFFFFF;
     border-radius: 20px;
     padding: 45px 50px;
     margin-bottom: 35px;
-    text-align: left;
+
+    text-align: center;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
     transition: 0.3s;
 }
 
@@ -45,25 +51,47 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* Recently Published */
+
+.recent-badge {
+    display: inline-block;
+    background: #F1E4FF;
+    color: #6B46A3;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
 /* Story Title */
+
 .story-card h2 {
     color: #6B46A3;
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     line-height: 1.4;
-    margin-bottom: 25px;
-    text-align: center;
+    margin: 0 0 25px;
 }
 
-/* Story Text */
-.story-card p {
-    color: #555;
+/* Read Link */
+
+.story-read-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #6B46A3;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 1.9;
-    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+.story-read-link:hover {
+    color: #8A63C9;
+    transform: translateX(4px);
 }
 
 /* Mobile Responsive */
+
 @media (max-width: 600px) {
 
     .stories-page {
@@ -87,8 +115,8 @@
         font-size: 23px;
     }
 
-    .story-card p {
-        font-size: 15px;
-        line-height: 1.8;
+    .recent-badge {
+        font-size: 13px;
+        padding: 7px 14px;
     }
 }

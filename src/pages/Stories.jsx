@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import stories from "../data/stories";
 
 function Stories() {
+  const latestStories = [...stories].reverse();
+
   return (
     <div className="stories-page">
 
@@ -15,11 +17,17 @@ function Stories() {
 
       <div className="stories-container">
 
-        {stories.map((story) => (
+        {latestStories.map((story, index) => (
           <article
             className="story-card"
             key={story.id}
           >
+
+            {index === 0 && (
+              <div className="recent-badge">
+                ✨ Recently Published
+              </div>
+            )}
 
             <h2>
               {story.title}
