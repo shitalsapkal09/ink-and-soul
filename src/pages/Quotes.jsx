@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 import quotesShayari from "../data/quotesShayari";
 
 function Quotes() {
-
-  // Newest quote first
-  const sortedQuotes = [...quotesShayari].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
+  // Latest added quote will appear first
+  const latestQuotes = [...quotesShayari].reverse();
 
   return (
     <div className="quotes-page">
@@ -22,13 +19,13 @@ function Quotes() {
 
       <div className="quotes-container">
 
-        {sortedQuotes.map((quote, index) => (
+        {latestQuotes.map((quote, index) => (
           <article
             className="quote-card"
             key={quote.id}
           >
 
-            {/* RECENTLY PUBLISHED */}
+            {/* Recently Published badge */}
             {index === 0 && (
               <div className="recently-published">
                 ✨ Recently Published
