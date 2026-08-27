@@ -1,0 +1,241 @@
+/* =========================
+   RECENTLY PUBLISHED PAGE
+========================= */
+
+.recent-page {
+    min-height: 100vh;
+    background: #FAF7F2;
+    padding: 70px 8% 80px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.recent-page .back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #6B46A3;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.recent-page .back-link:hover {
+    color: #8A63C9;
+    transform: translateX(-5px);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.recent-header {
+    max-width: 700px;
+    margin: 40px auto 60px;
+}
+
+.recent-icon {
+    display: inline-block;
+    font-size: 32px;
+    color: #6B46A3;
+    margin-bottom: 10px;
+}
+
+.recent-header h1 {
+    font-size: 55px;
+    color: #6B46A3;
+    font-family: "Playfair Display", serif;
+    margin: 10px 0 15px;
+    line-height: 1.2;
+}
+
+.recent-header p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   POSTS CONTAINER
+========================= */
+
+.recent-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+
+/* =========================
+   POST CARD
+========================= */
+
+.recent-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 35px;
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.recent-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.recent-category {
+    display: inline-block;
+    align-self: center;
+
+    color: #6B46A3;
+    background: #F1EAFE;
+
+    padding: 7px 16px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   POST TITLE
+========================= */
+
+.recent-card h2 {
+    color: #6B46A3;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 26px;
+    line-height: 1.4;
+
+    margin: 0 0 20px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.recent-card p {
+    color: #666;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0 0 25px;
+}
+
+
+/* =========================
+   READ LINK
+========================= */
+
+.recent-read-link {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #6B46A3;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.recent-read-link:hover {
+    color: #8A63C9;
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   BOTTOM BACK LINK
+========================= */
+
+.bottom-back-link {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .recent-page {
+        padding: 60px 6% 70px;
+    }
+
+    .recent-header {
+        margin:
+            30px auto 40px;
+    }
+
+    .recent-header h1 {
+        font-size: 40px;
+    }
+
+    .recent-header p {
+        font-size: 16px;
+    }
+
+    .recent-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .recent-card {
+        padding: 30px 25px;
+        min-height: 250px;
+    }
+
+    .recent-card h2 {
+        font-size: 23px;
+    }
+
+    .recent-card p {
+        font-size: 15px;
+    }
+
+}

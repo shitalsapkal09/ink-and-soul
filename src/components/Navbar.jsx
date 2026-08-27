@@ -77,6 +77,16 @@ function Navbar() {
           </Link>
         </li>
 
+        {/* RECENTLY PUBLISHED */}
+        <li>
+          <Link
+            to="/recently-published"
+            onClick={closeMenu}
+          >
+            Recently Published
+          </Link>
+        </li>
+
         {/* ABOUT */}
         <li>
           <Link

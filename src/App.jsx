@@ -24,6 +24,7 @@ import Stories from "./pages/Stories";
 import Contact from "./pages/Contact";
 import Writing from "./pages/Writing";
 import About from "./pages/About";
+import RecentlyPublished from "./pages/RecentlyPublished";
 
 // Scroll to top whenever the route changes
 function ScrollToTop() {
@@ -108,6 +109,15 @@ function App() {
         <Route
           path="/quotes"
           element={<Quotes />}
+        />
+
+        {/* =========================
+            RECENTLY PUBLISHED
+        ========================= */}
+
+        <Route
+          path="/recently-published"
+          element={<RecentlyPublished />}
         />
 
         {/* =========================
