@@ -5,48 +5,58 @@ import rightImage from "../assets/hero-right.png";
 
 function Hero() {
   return (
-    <section className="hero">
+    <>
+      {/* PRELOAD HERO IMAGES */}
+      <link rel="preload" as="image" href={leftImage} />
+      <link rel="preload" as="image" href={rightImage} />
 
-      {/* LEFT IMAGE */}
-      <img
-        src={leftImage}
-        alt=""
-        className="hero-left-image"
-      />
+      <section className="hero">
 
-      {/* RIGHT IMAGE */}
-      <img
-        src={rightImage}
-        alt=""
-        className="hero-right-image"
-      />
+        {/* LEFT IMAGE */}
+        <img
+          src={leftImage}
+          alt=""
+          className="hero-left-image"
+          loading="eager"
+          fetchPriority="high"
+        />
 
-      {/* YOUR EXISTING HERO CONTENT */}
-      <div className="hero-content">
+        {/* RIGHT IMAGE */}
+        <img
+          src={rightImage}
+          alt=""
+          className="hero-right-image"
+          loading="eager"
+          fetchPriority="high"
+        />
 
-        <div className="hero-top-line">
-          ── ♡ ──
+        {/* HERO CONTENT */}
+        <div className="hero-content">
+
+          <div className="hero-top-line">
+            ── ♡ ──
+          </div>
+
+          <h1>Ink & Soul</h1>
+
+          <div className="hero-divider">
+            ── ◇ ──
+          </div>
+
+          <h2>❧ Poetry • Stories • Emotions ❧</h2>
+
+          <p>
+            Explore heartfelt poems and meaningful stories written from the soul.
+          </p>
+
+          <Link to="/my-world" className="hero-button">
+            Welcome to My World
+          </Link>
+
         </div>
 
-        <h1>Ink & Soul</h1>
-
-        <div className="hero-divider">
-          ── ◇ ──
-        </div>
-
-        <h2>❧ Poetry • Stories • Emotions ❧</h2>
-
-        <p>
-          Explore heartfelt poems and meaningful stories written from the soul.
-        </p>
-
-        <Link to="/my-world" className="hero-button">
-          Welcome to My World
-        </Link>
-
-      </div>
-
-    </section>
+      </section>
+    </>
   );
 }
 
