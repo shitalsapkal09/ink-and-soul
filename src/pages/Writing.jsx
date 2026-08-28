@@ -493,9 +493,7 @@ function Writing() {
 
     try {
       if (navigator.share) {
-        await navigator.share(
-          shareData
-        );
+        await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(
           window.location.href
@@ -521,7 +519,6 @@ function Writing() {
   if (!writing) {
     return (
       <div className="writing-page">
-
         <Link
           to={backPath}
           className="writing-back top-back"
@@ -530,7 +527,6 @@ function Writing() {
         </Link>
 
         <h1>Writing Not Found</h1>
-
       </div>
     );
   }
@@ -563,16 +559,52 @@ function Writing() {
 
       {/* CONTENT */}
 
-      <div className="writing-content">
-        {writing.content
-          .split("\n")
-          .map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-            </span>
-          ))}
-      </div>
+      {language === "story" ? (
+
+        <div className="story-content">
+
+          {Array.isArray(writing.content)
+
+            ? writing.content.map(
+                (paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                )
+              )
+
+            : writing.content
+                .split(/\n\s*\n/)
+                .filter(
+                  (paragraph) =>
+                    paragraph.trim() !== ""
+                )
+                .map(
+                  (paragraph, index) => (
+                    <p key={index}>
+                      {paragraph.trim()}
+                    </p>
+                  )
+                )}
+
+        </div>
+
+      ) : (
+
+        <div className="writing-content">
+
+          {writing.content
+            .split("\n")
+            .map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+
+        </div>
+
+      )}
 
       {/* ACTIONS */}
 
@@ -678,6 +710,7 @@ function Writing() {
 
           {comments.length > 0 &&
             comments.map((comment) => (
+
               <div
                 className="comment"
                 key={comment.id}
@@ -695,6 +728,7 @@ function Writing() {
                     {comment.createdAt &&
                       typeof comment.createdAt.toDate ===
                         "function" && (
+
                         <span className="comment-time">
                           {" "}
                           •{" "}
@@ -702,6 +736,7 @@ function Writing() {
                             .toDate()
                             .toLocaleString()}
                         </span>
+
                       )}
 
                   </div>
@@ -712,6 +747,7 @@ function Writing() {
 
                   {comment.readerId ===
                     readerId && (
+
                     <button
                       type="button"
                       className="delete-comment-button"
@@ -724,11 +760,13 @@ function Writing() {
                     >
                       🗑 Delete
                     </button>
+
                   )}
 
                 </div>
 
               </div>
+
             ))}
 
         </div>
