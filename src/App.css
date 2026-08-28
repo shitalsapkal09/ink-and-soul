@@ -2,7 +2,7 @@
    GOOGLE FONTS
 ========================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@400;500;600&display=swap");
 
 
 /* =========================
@@ -32,13 +32,10 @@ body {
 
 .navbar {
   width: 100%;
-
   height: 82px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   padding: 0 5%;
@@ -48,7 +45,6 @@ body {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
 
   position: relative;
-
   z-index: 100;
 }
 
@@ -65,7 +61,6 @@ body {
   font-family: "Playfair Display", serif;
 
   font-size: 42px;
-
   font-weight: 600;
 
   white-space: nowrap;
@@ -84,9 +79,7 @@ body {
 
 .menu {
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
 
   gap: 38px;
@@ -94,7 +87,6 @@ body {
   list-style: none;
 
   margin: 0;
-
   padding: 0;
 }
 
@@ -111,7 +103,6 @@ body {
   font-family: "Poppins", sans-serif;
 
   font-size: 16px;
-
   font-weight: 500;
 
   transition: 0.3s ease;
@@ -120,18 +111,14 @@ body {
 }
 
 
-/* =========================
-   MENU HOVER
-========================= */
+/* MENU HOVER */
 
 .menu li a:hover {
   color: #6b46a3;
 }
 
 
-/* =========================
-   UNDERLINE EFFECT
-========================= */
+/* UNDERLINE EFFECT */
 
 .menu li a::after {
   content: "";
@@ -139,11 +126,9 @@ body {
   position: absolute;
 
   width: 0;
-
   height: 2px;
 
   left: 0;
-
   bottom: -8px;
 
   background: #6b46a3;
@@ -164,7 +149,6 @@ body {
   display: none;
 
   border: none;
-
   background: transparent;
 
   font-size: 30px;
@@ -182,20 +166,13 @@ body {
 .hero {
   position: relative;
 
-  /*
-    Desktop:
-    Fits Hero between Navbar and Quote
-  */
   height: calc(100vh - 252px);
-
   min-height: 500px;
 
   overflow: hidden;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding: 20px;
@@ -212,13 +189,10 @@ body {
   position: absolute;
 
   left: 0;
-
   bottom: 0;
 
   width: 31%;
-
   max-width: 500px;
-
   max-height: 100%;
 
   object-fit: contain;
@@ -237,13 +211,10 @@ body {
   position: absolute;
 
   right: 0;
-
   bottom: 0;
 
   width: 31%;
-
   max-width: 500px;
-
   max-height: 100%;
 
   object-fit: contain;
@@ -364,7 +335,6 @@ body {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-width: 280px;
@@ -398,9 +368,7 @@ body {
 }
 
 
-/* =========================
-   BUTTON HOVER
-========================= */
+/* BUTTON HOVER */
 
 .hero-button:hover {
   transform: translateY(-4px);
@@ -587,14 +555,12 @@ body {
 
 
 /* =========================
-   MOBILE MENU
+   MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* =========================
-     NAVBAR
-  ========================= */
+  /* NAVBAR */
 
   .navbar {
     height: 75px;
@@ -655,9 +621,7 @@ body {
   }
 
 
-  /* =========================
-     HERO
-  ========================= */
+  /* HERO */
 
   .hero {
     height: auto;
@@ -704,9 +668,7 @@ body {
   }
 
 
-  /* =========================
-     HERO IMAGES
-  ========================= */
+  /* HERO IMAGES */
 
   .hero-left-image {
     width: 45%;
@@ -722,9 +684,7 @@ body {
   }
 
 
-  /* =========================
-     QUOTE
-  ========================= */
+  /* QUOTE */
 
   .quote-section {
     height: auto;
@@ -747,9 +707,7 @@ body {
   }
 
 
-  /* =========================
-     FOOTER
-  ========================= */
+  /* FOOTER */
 
   .footer {
     padding: 30px 20px;
