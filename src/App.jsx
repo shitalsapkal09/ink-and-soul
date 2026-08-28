@@ -46,10 +46,7 @@ function App() {
 
       <Routes>
 
-        {/* =========================
-            MAIN HOME PAGE
-        ========================= */}
-
+        {/* HOME */}
         <Route
           path="/"
           element={
@@ -60,19 +57,13 @@ function App() {
           }
         />
 
-        {/* =========================
-            MY WORLD
-        ========================= */}
-
+        {/* MY WORLD */}
         <Route
           path="/my-world"
           element={<MyWorld />}
         />
 
-        {/* =========================
-            POETRY
-        ========================= */}
-
+        {/* POETRY */}
         <Route
           path="/poetry"
           element={<Poetry />}
@@ -93,55 +84,37 @@ function App() {
           element={<English />}
         />
 
-        {/* =========================
-            STORIES
-        ========================= */}
-
+        {/* STORIES */}
         <Route
           path="/stories"
           element={<Stories />}
         />
 
-        {/* =========================
-            QUOTES & SHAYARI
-        ========================= */}
-
+        {/* QUOTES & SHAYARI */}
         <Route
           path="/quotes"
           element={<Quotes />}
         />
 
-        {/* =========================
-            RECENTLY PUBLISHED
-        ========================= */}
-
+        {/* RECENTLY PUBLISHED */}
         <Route
           path="/recently-published"
           element={<RecentlyPublished />}
         />
 
-        {/* =========================
-            INDIVIDUAL WRITING
-        ========================= */}
-
+        {/* INDIVIDUAL WRITING - POETRY, STORIES, QUOTES */}
         <Route
           path="/writing/:language/:id"
           element={<Writing />}
         />
 
-        {/* =========================
-            ABOUT
-        ========================= */}
-
+        {/* ABOUT */}
         <Route
           path="/about"
           element={<About />}
         />
 
-        {/* =========================
-            CONTACT
-        ========================= */}
-
+        {/* CONTACT */}
         <Route
           path="/contact"
           element={<Contact />}

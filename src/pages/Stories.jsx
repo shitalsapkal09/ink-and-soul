@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import stories from "../data/stories";
 
 function Stories() {
-  const latestStories = [...stories].reverse();
+  // stories.js is already arranged from latest to oldest
+  const latestStories = stories;
 
   return (
     <div className="stories-page">
@@ -23,7 +24,8 @@ function Stories() {
             key={story.id}
           >
 
-            {index === 0 && (
+            {/* Show badge only on the latest story */}
+            {index === 0 && story.recent === true && (
               <div className="recent-badge">
                 ✨ Recently Published
               </div>
