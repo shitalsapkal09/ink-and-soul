@@ -3,7 +3,22 @@ import { Link } from "react-router-dom";
 import marathiPoems from "../data/marathiPoems";
 
 function Marathi() {
-  const latestPoems = [...marathiPoems].reverse();
+  // Exact order wanted on the Marathi page
+  const poemOrder = [
+    "premachya-vatevarati",
+    "ek-premkahani",
+    "apurn-ti",
+    "prematil-kavita",
+    "mulich-patra-aaisathi",
+    "aakrosh",
+    "paus-aani-aathvan",
+    "junya-natyanchi-odh",
+  ];
+
+  // Arrange poems according to the exact order above
+  const orderedPoems = poemOrder
+    .map((id) => marathiPoems.find((poem) => poem.id === id))
+    .filter(Boolean);
 
   return (
     <div className="marathi-page">
@@ -23,12 +38,13 @@ function Marathi() {
 
       <div className="marathi-grid">
 
-        {latestPoems.map((poem, index) => (
+        {orderedPoems.map((poem, index) => (
           <div
             className="marathi-card"
             key={poem.id}
           >
 
+            {/* Recently Published badge only on first poem */}
             {index === 0 && (
               <div className="recent-badge">
                 ✨ Recently Published

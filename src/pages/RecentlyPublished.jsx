@@ -3,32 +3,17 @@ import { Link } from "react-router-dom";
 
 function RecentlyPublished() {
   const recentPosts = [
-    {
-      id: "kathiparyantcha-pravas",
-      title: "काठीपर्यंतचा प्रवास",
-      category: "Marathi Story",
-      description:
-        "दुचाकीवर सुरू झालेला प्रेमाचा प्रवास काठीपर्यंत सोबत निभावणारी एक हृदयस्पर्शी कथा.",
-      link: "/writing/story/kathiparyantcha-pravas",
-    },
+{
+  id: "premachya-vatevarati",
+  title: "प्रेमाच्या वाटेवरती...",
+  category: "Marathi Poetry",
+  description:
+    "प्रेमाच्या वाटेवर सुरू झालेला प्रवास, नात्यांच्या वळणावर एक वेगळीच जाणीव देऊन जातो.",
+  link: "/writing/marathi/premachya-vatevarati",
+}
 
-    {
-      id: "chai-aur-ishq",
-      title: "चाय से मोहब्बत",
-      category: "Quotes & Shayari",
-      description:
-        "चाय से मोहब्बत है साहब, उसका साथ आख़िरी घूँट तक निभाएँगे।",
-      link: "/writing/quote/chai-aur-ishq",
-    },
 
-    {
-      id: "ab-ghar-jaane-ka-man-nahi-karta",
-      title: "अब घर जाने का मन नहीं करता",
-      category: "Hindi Poetry",
-      description:
-        "कभी-कभी घर वही रहता है, लेकिन हम बदल जाते हैं।",
-      link: "/writing/hindi/ab-ghar-jaane-ka-man-nahi-karta",
-    },
+    
   ];
 
   return (
