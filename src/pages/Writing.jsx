@@ -48,7 +48,10 @@ function Writing() {
   } else if (language === "story") {
     writings = stories;
     backPath = "/stories";
-  } else if (language === "quote") {
+  } else if (
+    language === "quotes" ||
+    language === "quote"
+  ) {
     writings = quotesShayari;
     backPath = "/quotes";
   }
@@ -63,7 +66,11 @@ function Writing() {
       )
     : null;
 
-  const writingId = `${language || "quote"}-${id || "collection"}`;
+  // =========================================
+  // UNIQUE WRITING ID FOR FIREBASE
+  // =========================================
+
+  const writingId = `${language || "quotes"}-${id || "collection"}`;
 
   // =========================================
   // STATES
@@ -519,6 +526,7 @@ function Writing() {
   if (!writing) {
     return (
       <div className="writing-page">
+
         <Link
           to={backPath}
           className="writing-back top-back"
@@ -527,6 +535,7 @@ function Writing() {
         </Link>
 
         <h1>Writing Not Found</h1>
+
       </div>
     );
   }

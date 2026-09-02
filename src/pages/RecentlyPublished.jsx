@@ -3,17 +3,25 @@ import { Link } from "react-router-dom";
 
 function RecentlyPublished() {
   const recentPosts = [
-{
-  id: "premachya-vatevarati",
-  title: "प्रेमाच्या वाटेवरती...",
-  category: "Marathi Poetry",
-  description:
-    "प्रेमाच्या वाटेवर सुरू झालेला प्रवास, नात्यांच्या वळणावर एक वेगळीच जाणीव देऊन जातो.",
-  link: "/writing/marathi/premachya-vatevarati",
-}
 
+    {
+      id: "premachya-vatevarati",
+      title: "प्रेमाच्या वाटेवरती...",
+      category: "Marathi Poetry",
+      description:
+        "प्रेमाच्या वाटेवर सुरू झालेला प्रवास, नात्यांच्या वळणावर एक वेगळीच जाणीव देऊन जातो.",
+      link: "/writing/marathi/premachya-vatevarati",
+    },
 
-    
+    {
+      id: "karmacha-hishob",
+      title: "कर्माचा हिशोब",
+      category: "Marathi Quote",
+      description:
+        "सगळ्या गोष्टी बोलून दाखवायची गरज नसते… कोण कसं वागलं, का वागलं—याचा हिशोब आपण नाही, कर्मच योग्य वेळी करतं.",
+      link: "/writing/quotes/karmacha-hishob",
+    },
+
   ];
 
   return (
