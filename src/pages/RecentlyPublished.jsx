@@ -22,6 +22,19 @@ function RecentlyPublished() {
       link: "/writing/quotes/karmacha-hishob",
     },
 
+    {
+  id: "aaj-kal-ki-ladkiyan-badal-gayi-hain",
+
+  title: "आज कल की लड़कियाँ बदल गई हैं…",
+
+  category: "Hindi Story",
+
+  description:
+    "क्या सच में आज की लड़कियाँ बदल गई हैं, या बस उन्हें अपने सपनों और अपनी जिंदगी के लिए बोलने का मौका मिला है?",
+
+  link: "/writing/story/aaj-kal-ki-ladkiyan-badal-gayi-hain",
+}
+
   ];
 
   return (

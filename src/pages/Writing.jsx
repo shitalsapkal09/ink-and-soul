@@ -70,7 +70,8 @@ function Writing() {
   // UNIQUE WRITING ID FOR FIREBASE
   // =========================================
 
-  const writingId = `${language || "quotes"}-${id || "collection"}`;
+  const writingId =
+    `${language || "quotes"}-${id || "collection"}`;
 
   // =========================================
   // STATES
@@ -93,9 +94,8 @@ function Writing() {
   // =========================================
 
   const [readerId] = useState(() => {
-    let savedId = localStorage.getItem(
-      "inkSoulReaderId"
-    );
+    let savedId =
+      localStorage.getItem("inkSoulReaderId");
 
     if (!savedId) {
       savedId =
@@ -572,29 +572,91 @@ function Writing() {
 
         <div className="story-content">
 
-          {Array.isArray(writing.content)
+          {writing.content
+            .split("\n")
+            .map((line, index) => {
 
-            ? writing.content.map(
-                (paragraph, index) => (
-                  <p key={index}>
-                    {paragraph}
-                  </p>
-                )
-              )
+              const trimmedLine =
+                line.trim();
 
-            : writing.content
-                .split(/\n\s*\n/)
-                .filter(
-                  (paragraph) =>
-                    paragraph.trim() !== ""
-                )
-                .map(
-                  (paragraph, index) => (
-                    <p key={index}>
-                      {paragraph.trim()}
-                    </p>
+              // Empty line for spacing
+              if (trimmedLine === "") {
+                return (
+                  <div
+                    key={index}
+                    className="story-space"
+                  />
+                );
+              }
+
+              // Find colon
+              const colonIndex =
+                trimmedLine.indexOf(":");
+
+              // Character names
+              const speakers = [
+                "पापा",
+                "दादी",
+                "दादाजी",
+                "पोती",
+              ];
+
+              // If line is dialogue
+              if (colonIndex !== -1) {
+
+                const possibleSpeaker =
+                  trimmedLine
+                    .substring(
+                      0,
+                      colonIndex
+                    )
+                    .trim();
+
+                const dialogue =
+                  trimmedLine
+                    .substring(
+                      colonIndex + 1
+                    )
+                    .trim();
+
+                if (
+                  speakers.includes(
+                    possibleSpeaker
                   )
-                )}
+                ) {
+                  return (
+                    <div
+                      className="story-dialogue"
+                      key={index}
+                    >
+
+                      <strong className="speaker-name">
+                        {possibleSpeaker}
+                      </strong>
+
+                      <span className="speaker-colon">
+                        :
+                      </span>
+
+                      <span className="speaker-text">
+                        {dialogue}
+                      </span>
+
+                    </div>
+                  );
+                }
+              }
+
+              // Normal story paragraph
+              return (
+                <p
+                  className="story-paragraph"
+                  key={index}
+                >
+                  {trimmedLine}
+                </p>
+              );
+            })}
 
         </div>
 

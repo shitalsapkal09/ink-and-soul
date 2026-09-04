@@ -65,7 +65,8 @@
 
 
 /* =========================================
-   WRITING CONTENT
+   POETRY / QUOTES CONTENT
+   Keep this CENTER aligned
 ========================================= */
 
 .writing-content {
@@ -79,6 +80,47 @@
 
 .writing-content p {
   margin: 0 0 22px;
+}
+
+
+/* =========================================
+   STORY CONTENT
+   Keep this LEFT aligned
+========================================= */
+
+.story-content {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 19px;
+  line-height: 1.9;
+  color: #333;
+}
+
+
+/* Each story paragraph */
+
+.story-content p {
+  margin: 0 0 22px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+
+/* =========================================
+   STORY DIALOGUE
+========================================= */
+
+/* Dialogue names like:
+   पापा :
+   दादी :
+   दादाजी :
+*/
+
+.story-content strong {
+  font-weight: 700;
+  color: #333;
 }
 
 
@@ -300,10 +342,30 @@
     margin-bottom: 30px;
   }
 
+
+  /* Poems and quotes */
+
   .writing-content {
     font-size: 18px;
     line-height: 1.9;
   }
+
+
+  /* Stories */
+
+  .story-content {
+    font-size: 17px;
+    line-height: 1.85;
+    text-align: left;
+  }
+
+  .story-content p {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+
+  /* Actions */
 
   .writing-actions {
     gap: 10px;
@@ -314,6 +376,9 @@
     padding: 9px 16px;
     font-size: 14px;
   }
+
+
+  /* Comments */
 
   .comments-section {
     width: 100%;
@@ -332,4 +397,5 @@
     flex-direction: column;
     gap: 5px;
   }
+
 }
