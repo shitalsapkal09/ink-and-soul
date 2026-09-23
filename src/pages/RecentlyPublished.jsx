@@ -3,38 +3,14 @@ import { Link } from "react-router-dom";
 
 function RecentlyPublished() {
   const recentPosts = [
-
     {
-      id: "premachya-vatevarati",
-      title: "प्रेमाच्या वाटेवरती...",
-      category: "Marathi Poetry",
+      id: "dayalupanachi-kimmat",
+      title: "चांगला होतो... म्हणून?",
+      category: "Marathi Story",
       description:
-        "प्रेमाच्या वाटेवर सुरू झालेला प्रवास, नात्यांच्या वळणावर एक वेगळीच जाणीव देऊन जातो.",
-      link: "/writing/marathi/premachya-vatevarati",
+        "चांगुलपणा, विश्वास आणि माणसांच्या खऱ्या चेहऱ्यांची जाणीव करून देणारी एक भावनिक गोष्ट.",
+      link: "/writing/story/dayalupanachi-kimmat",
     },
-
-    {
-      id: "karmacha-hishob",
-      title: "कर्माचा हिशोब",
-      category: "Marathi Quote",
-      description:
-        "सगळ्या गोष्टी बोलून दाखवायची गरज नसते… कोण कसं वागलं, का वागलं—याचा हिशोब आपण नाही, कर्मच योग्य वेळी करतं.",
-      link: "/writing/quotes/karmacha-hishob",
-    },
-
-    {
-  id: "aaj-kal-ki-ladkiyan-badal-gayi-hain",
-
-  title: "आज कल की लड़कियाँ बदल गई हैं…",
-
-  category: "Hindi Story",
-
-  description:
-    "क्या सच में आज की लड़कियाँ बदल गई हैं, या बस उन्हें अपने सपनों और अपनी जिंदगी के लिए बोलने का मौका मिला है?",
-
-  link: "/writing/story/aaj-kal-ki-ladkiyan-badal-gayi-hain",
-}
-
   ];
 
   return (
