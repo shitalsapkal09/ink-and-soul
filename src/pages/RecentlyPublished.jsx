@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function RecentlyPublished() {
   const recentPosts = [
     {
-      id: "aapal",
-      title: "आपलं?...",
+      id: "aapal asunahi",
+      title: "आपलं असूनही...",
       category: "Marathi Poetry",
       description:
         "दोन मनांची कहाणी... पण जातीच्या भिंती, समाजाची भीती आणि दुसऱ्यांच्या निर्णयांमध्ये अडकलेलं एक अपुरं नातं.",
