@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function RecentlyPublished() {
   const recentPosts = [
     {
-      id: "dayalupanachi-kimmat",
-      title: "चांगला होतो... म्हणून?",
-      category: "Marathi Story",
+      id: "aapal",
+      title: "आपलं?...",
+      category: "Marathi Poetry",
       description:
-        "चांगुलपणा, विश्वास आणि माणसांच्या खऱ्या चेहऱ्यांची जाणीव करून देणारी एक भावनिक गोष्ट.",
-      link: "/writing/story/dayalupanachi-kimmat",
+        "दोन मनांची कहाणी... पण जातीच्या भिंती, समाजाची भीती आणि दुसऱ्यांच्या निर्णयांमध्ये अडकलेलं एक अपुरं नातं.",
+      link: "/writing/marathi/aapal",
     },
   ];
 
@@ -21,7 +21,6 @@ function RecentlyPublished() {
       </Link>
 
       <div className="recent-header">
-
         <span className="recent-icon">✦</span>
 
         <h1>Recently Published</h1>
@@ -29,28 +28,19 @@ function RecentlyPublished() {
         <p>
           Fresh words, new thoughts, and stories recently added to Ink & Soul.
         </p>
-
       </div>
 
       <div className="recent-container">
-
         {recentPosts.map((post) => (
-          <article
-            className="recent-card"
-            key={post.id}
-          >
+          <article className="recent-card" key={post.id}>
 
             <span className="recent-category">
               {post.category}
             </span>
 
-            <h2>
-              {post.title}
-            </h2>
+            <h2>{post.title}</h2>
 
-            <p>
-              {post.description}
-            </p>
+            <p>{post.description}</p>
 
             <Link
               to={post.link}
@@ -61,7 +51,6 @@ function RecentlyPublished() {
 
           </article>
         ))}
-
       </div>
 
       <Link
