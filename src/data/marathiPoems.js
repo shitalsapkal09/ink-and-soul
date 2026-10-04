@@ -1,8 +1,8 @@
 const marathiPoems = [
 
   {
-    id: "aapal",
-    title: "आपलं?...",
+    id: "aapal-asunahi",
+    title: "आपलं असूनही...",
     recentlyPublished: true,
     content: `प्रेमाची ही कहाणी होती...
 
@@ -587,7 +587,6 @@ const marathiPoems = [
   {
     id: "premachya-vatevarati",
     title: "प्रेमाच्या वाटेवरती...",
-    recentlyPublished: true,
     content: `नकळत कधीतरी पाऊल
 
 प्रेमाच्या वाटेवरती पडलं,

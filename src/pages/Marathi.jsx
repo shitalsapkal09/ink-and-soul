@@ -5,7 +5,7 @@ import marathiPoems from "../data/marathiPoems";
 function Marathi() {
   // Exact order wanted on the Marathi page
   const poemOrder = [
-    "aapal asunahi",
+    "aapal-asunahi",
     "premachya-vatevarati",
     "ek-premkahani",
     "apurn-ti",
