@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 function RecentlyPublished() {
   const recentPosts = [
     {
+      id: "tya-4-divasantli-ti",
+      title: "त्या ४ दिवसांतली ती",
+      category: "Marathi Story",
+      description:
+        "चार दिवसांची वेदना, परंपरांचे बंधन आणि एका मुलीचा देवीसमोर उभा राहिलेला एकच प्रश्न — खरंच मी अशुद्ध आहे का?",
+      link: "/writing/story/tya-4-divasantli-ti",
+    },
+    {
       id: "aapal-asunahi",
       title: "आपलं असूनही...",
       category: "Marathi Poetry",
