@@ -4,20 +4,30 @@ import { Link } from "react-router-dom";
 function RecentlyPublished() {
   const recentPosts = [
     {
+      id: "parijaat",
+      title: "पारिजात",
+      category: "Marathi Poetry",
+      description:
+        "साधेपणातलं सौंदर्य आणि वागण्यातून दरवळणारा सुगंध शिकवणारी एक सुंदर कविता.",
+      link: "/writing/marathi/parijaat",
+    },
+
+    
+{
+  id: "chandrाची-aas",
+  title: "चंद्राची आस",
+  category: "Marathi Quote",
+  description:
+    "एखाद्या गोष्टीचं अप्रूप ती सहज मिळू लागली की कसं कमी होतं, हे सांगणारा एक भावस्पर्शी विचार.",
+  link: "/writing/quote/chandrाची-aas",
+},
+    {
       id: "tya-4-divasantli-ti",
       title: "त्या ४ दिवसांतली ती",
       category: "Marathi Story",
       description:
         "चार दिवसांची वेदना, परंपरांचे बंधन आणि एका मुलीचा देवीसमोर उभा राहिलेला एकच प्रश्न — खरंच मी अशुद्ध आहे का?",
       link: "/writing/story/tya-4-divasantli-ti",
-    },
-    {
-      id: "aapal-asunahi",
-      title: "आपलं असूनही...",
-      category: "Marathi Poetry",
-      description:
-        "दोन मनांची कहाणी... पण जातीच्या भिंती, समाजाची भीती आणि दुसऱ्यांच्या निर्णयांमध्ये अडकलेलं एक अपुरं नातं.",
-      link: "/writing/marathi/aapal-asunahi",
     },
   ];
 
